@@ -366,6 +366,8 @@ func getKubevirtProviderSpec(nodeSpec apiv1.NodeSpec) (*runtime.RawExtension, er
 		SourceURL:        providerconfig.ConfigVarString{Value: nodeSpec.Cloud.Kubevirt.SourceURL},
 		Namespace:        providerconfig.ConfigVarString{Value: nodeSpec.Cloud.Kubevirt.Namespace},
 		Memory:           providerconfig.ConfigVarString{Value: nodeSpec.Cloud.Kubevirt.Memory},
+		DNSPolicy:        providerconfig.ConfigVarString{Value: nodeSpec.Cloud.Kubevirt.DNSPolicy},
+		DNSConfig:        providerconfig.ConfigVarString{Value: nodeSpec.Cloud.Kubevirt.DNSConfig},
 	}
 
 	ext := &runtime.RawExtension{}

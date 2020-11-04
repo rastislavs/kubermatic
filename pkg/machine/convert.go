@@ -239,6 +239,8 @@ func GetAPIV2NodeCloudSpec(machineSpec clusterv1alpha1.MachineSpec) (*apiv1.Node
 			SourceURL:        config.SourceURL.Value,
 			StorageClassName: config.StorageClassName.Value,
 			PVCSize:          config.PVCSize.Value,
+			DNSPolicy:        config.DNSPolicy.Value,
+			DNSConfig:        config.DNSConfig.Value,
 		}
 	case providerconfig.CloudProviderAlibaba:
 		config := &alibaba.RawConfig{}

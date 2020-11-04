@@ -1227,6 +1227,12 @@ type KubevirtNodeSpec struct {
 	// PVCSize states the size of the provisioned pvc per node.
 	// required: true
 	PVCSize string `json:"pvcSize"`
+	// DNSPolicy defines how a pod's DNS will be configured.
+	// required: false
+	DNSPolicy string `json:"dnsPolicy"`
+	// DNSConfig Specifies the DNS parameters of a pod.
+	// required: false
+	DNSConfig string `json:"dnsConfig"`
 }
 
 // AlibabaNodeSpec alibaba specific node settings
